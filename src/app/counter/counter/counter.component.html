@@ -1,11 +1,14 @@
 <div class="row">
     <div class="col-md-12">
         <div class="my-3">
-            <app-counter-ouput></app-counter-ouput>
+            <app-counter-ouput [counter]="counter"></app-counter-ouput>
         </div>
         <hr />
         <div class="my-3">
-            <app-counter-buttons>
+            <app-counter-buttons 
+            (increment)="onIncrement()" 
+            (decrement)="onDecrement()"
+            (reset)="onReset()">
         </app-counter-buttons>
         </div>
     </div>
